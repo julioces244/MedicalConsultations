@@ -7,15 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0809DE7230D79BF9AA2F2021 /* Pods_MedicalConsultations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AD08BB6EFFC0B00E7E86DE /* Pods_MedicalConsultations.framework */; };
+		F4165E8021B84B360059DACC /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4165E7F21B84B360059DACC /* GetLocationViewController.swift */; };
+		F4186F2621ACB943005F503C /* DoctoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186F2521ACB943005F503C /* DoctoresTableViewCell.swift */; };
+		F4186F2821ACB9E8005F503C /* DoctoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186F2721ACB9E8005F503C /* DoctoresViewController.swift */; };
+		F4186F2A21ACD221005F503C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186F2921ACD221005F503C /* ProfileViewController.swift */; };
 		F418AC38218CB1530030E18D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418AC37218CB1530030E18D /* AppDelegate.swift */; };
 		F418AC3A218CB1530030E18D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418AC39218CB1530030E18D /* ViewController.swift */; };
 		F418AC3D218CB1530030E18D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F418AC3B218CB1530030E18D /* Main.storyboard */; };
 		F418AC40218CB1530030E18D /* MedicalConsultations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F418AC3E218CB1530030E18D /* MedicalConsultations.xcdatamodeld */; };
 		F418AC42218CB1530030E18D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F418AC41218CB1530030E18D /* Assets.xcassets */; };
 		F418AC45218CB1530030E18D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F418AC43218CB1530030E18D /* LaunchScreen.storyboard */; };
+		F418AC4F218CB7A30030E18D /* kisspng-logo-stethoscope-graphic-design-stetoskop-5ac18fb4835d75.2398837515226346765381.png in Resources */ = {isa = PBXBuildFile; fileRef = F418AC4E218CB7A30030E18D /* kisspng-logo-stethoscope-graphic-design-stetoskop-5ac18fb4835d75.2398837515226346765381.png */; };
+		F418AC51218CBC890030E18D /* significado-del-color-blanco.png in Resources */ = {isa = PBXBuildFile; fileRef = F418AC50218CBC890030E18D /* significado-del-color-blanco.png */; };
+		F418B73D2192634500EC97B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B73C2192634500EC97B3 /* MainViewController.swift */; };
+		F418B74D2192659800EC97B3 /* CariocaGestureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7432192659700EC97B3 /* CariocaGestureManager.swift */; };
+		F418B74E2192659800EC97B3 /* CariocaIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7442192659700EC97B3 /* CariocaIcon.swift */; };
+		F418B74F2192659800EC97B3 /* CariocaMenu+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7452192659700EC97B3 /* CariocaMenu+Protocols.swift */; };
+		F418B7502192659800EC97B3 /* CariocaMenuContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7462192659800EC97B3 /* CariocaMenuContainerView.swift */; };
+		F418B7512192659800EC97B3 /* CariocaMenu+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7472192659800EC97B3 /* CariocaMenu+Enums.swift */; };
+		F418B7522192659800EC97B3 /* CariocaIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7482192659800EC97B3 /* CariocaIndicatorView.swift */; };
+		F418B7532192659800EC97B3 /* CariocaMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7492192659800EC97B3 /* CariocaMenu.swift */; };
+		F418B7542192659800EC97B3 /* CariocaMenu+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B74A2192659800EC97B3 /* CariocaMenu+Utils.swift */; };
+		F418B7552192659800EC97B3 /* CariocaMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B74B2192659800EC97B3 /* CariocaMenuItem.swift */; };
+		F418B7562192659800EC97B3 /* CariocaIndicatorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B74C2192659800EC97B3 /* CariocaIndicatorConfiguration.swift */; };
+		F418B75A2192677000EC97B3 /* ASGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7582192677000EC97B3 /* ASGradientView.swift */; };
+		F418B75B2192677000EC97B3 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B7592192677000EC97B3 /* Storyboardable.swift */; };
+		F418B75D219269B700EC97B3 /* EspecialidadesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418B75C219269B700EC97B3 /* EspecialidadesViewController.swift */; };
+		F418E3E1218CE8DD00EA0FE8 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418E3E0218CE8DD00EA0FE8 /* RegistroViewController.swift */; };
+		F418E3E4218CF12700EA0FE8 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418E3E3218CF12700EA0FE8 /* Toast.swift */; };
+		F418E3E6218CFB2100EA0FE8 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418E3E5218CFB2100EA0FE8 /* Validations.swift */; };
+		F418F80521AEEDFF00D2EFBC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F418F80421AEEDFF00D2EFBC /* MapKit.framework */; };
+		F418F80721AEEE3200D2EFBC /* UbicacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418F80621AEEE3200D2EFBC /* UbicacionViewController.swift */; };
+		F418F80921AF2AE200D2EFBC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418F80821AF2AE200D2EFBC /* Room.swift */; };
+		F41949A821936B030042C2B4 /* DemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41949A721936B030042C2B4 /* DemoController.swift */; };
+		F41C9BFF21B7128200ADAD7B /* OverviewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C9BFE21B7128200ADAD7B /* OverviewProfileViewController.swift */; };
+		F41F9C2721A8AF570004F9CC /* EspecialidadesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F9C2621A8AF570004F9CC /* EspecialidadesTableViewCell.swift */; };
+		F429666621B5FBE000E81C6A /* AllUbicacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429666521B5FBE000E81C6A /* AllUbicacionViewController.swift */; };
+		F429666821B605F600E81C6A /* ShowAllUbicacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429666721B605F600E81C6A /* ShowAllUbicacionViewController.swift */; };
+		F47D956A2192533600F53813 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D95692192533600F53813 /* InicioViewController.swift */; };
+		F47D957021925E5600F53813 /* DemoMenuContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D956F21925E5600F53813 /* DemoMenuContentController.swift */; };
+		F4CC42EF21A37F010047014B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC42EE21A37F010047014B /* Usuario.swift */; };
+		F4D651A021A633AF00D920E7 /* Especialidad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6519F21A633AF00D920E7 /* Especialidad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04C05E10272324E4992C9EFC /* Pods-MedicalConsultations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalConsultations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalConsultations/Pods-MedicalConsultations.debug.xcconfig"; sourceTree = "<group>"; };
+		B160D936A354A8E5FBCA37EF /* Pods-MedicalConsultations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalConsultations.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalConsultations/Pods-MedicalConsultations.release.xcconfig"; sourceTree = "<group>"; };
+		F4165E7F21B84B360059DACC /* GetLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
+		F4186F2521ACB943005F503C /* DoctoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctoresTableViewCell.swift; sourceTree = "<group>"; };
+		F4186F2721ACB9E8005F503C /* DoctoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctoresViewController.swift; sourceTree = "<group>"; };
+		F4186F2921ACD221005F503C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F418AC34218CB1530030E18D /* MedicalConsultations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicalConsultations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F418AC37218CB1530030E18D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F418AC39218CB1530030E18D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +66,38 @@
 		F418AC41218CB1530030E18D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F418AC44218CB1530030E18D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F418AC46218CB1530030E18D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F418AC4E218CB7A30030E18D /* kisspng-logo-stethoscope-graphic-design-stetoskop-5ac18fb4835d75.2398837515226346765381.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kisspng-logo-stethoscope-graphic-design-stetoskop-5ac18fb4835d75.2398837515226346765381.png"; sourceTree = "<group>"; };
+		F418AC50218CBC890030E18D /* significado-del-color-blanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "significado-del-color-blanco.png"; sourceTree = "<group>"; };
+		F418B73C2192634500EC97B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F418B7432192659700EC97B3 /* CariocaGestureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaGestureManager.swift; sourceTree = "<group>"; };
+		F418B7442192659700EC97B3 /* CariocaIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaIcon.swift; sourceTree = "<group>"; };
+		F418B7452192659700EC97B3 /* CariocaMenu+Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CariocaMenu+Protocols.swift"; sourceTree = "<group>"; };
+		F418B7462192659800EC97B3 /* CariocaMenuContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaMenuContainerView.swift; sourceTree = "<group>"; };
+		F418B7472192659800EC97B3 /* CariocaMenu+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CariocaMenu+Enums.swift"; sourceTree = "<group>"; };
+		F418B7482192659800EC97B3 /* CariocaIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaIndicatorView.swift; sourceTree = "<group>"; };
+		F418B7492192659800EC97B3 /* CariocaMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaMenu.swift; sourceTree = "<group>"; };
+		F418B74A2192659800EC97B3 /* CariocaMenu+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CariocaMenu+Utils.swift"; sourceTree = "<group>"; };
+		F418B74B2192659800EC97B3 /* CariocaMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaMenuItem.swift; sourceTree = "<group>"; };
+		F418B74C2192659800EC97B3 /* CariocaIndicatorConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CariocaIndicatorConfiguration.swift; sourceTree = "<group>"; };
+		F418B7582192677000EC97B3 /* ASGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASGradientView.swift; sourceTree = "<group>"; };
+		F418B7592192677000EC97B3 /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		F418B75C219269B700EC97B3 /* EspecialidadesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspecialidadesViewController.swift; sourceTree = "<group>"; };
+		F418E3E0218CE8DD00EA0FE8 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		F418E3E3218CF12700EA0FE8 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		F418E3E5218CFB2100EA0FE8 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
+		F418F80421AEEDFF00D2EFBC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F418F80621AEEE3200D2EFBC /* UbicacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicacionViewController.swift; sourceTree = "<group>"; };
+		F418F80821AF2AE200D2EFBC /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		F41949A721936B030042C2B4 /* DemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoController.swift; sourceTree = "<group>"; };
+		F41C9BFE21B7128200ADAD7B /* OverviewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewProfileViewController.swift; sourceTree = "<group>"; };
+		F41F9C2621A8AF570004F9CC /* EspecialidadesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspecialidadesTableViewCell.swift; sourceTree = "<group>"; };
+		F429666521B5FBE000E81C6A /* AllUbicacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUbicacionViewController.swift; sourceTree = "<group>"; };
+		F429666721B605F600E81C6A /* ShowAllUbicacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllUbicacionViewController.swift; sourceTree = "<group>"; };
+		F47D95692192533600F53813 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
+		F47D956F21925E5600F53813 /* DemoMenuContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMenuContentController.swift; sourceTree = "<group>"; };
+		F4CC42EE21A37F010047014B /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		F4D6519F21A633AF00D920E7 /* Especialidad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Especialidad.swift; sourceTree = "<group>"; };
+		F5AD08BB6EFFC0B00E7E86DE /* Pods_MedicalConsultations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalConsultations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +105,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F418F80521AEEDFF00D2EFBC /* MapKit.framework in Frameworks */,
+				0809DE7230D79BF9AA2F2021 /* Pods_MedicalConsultations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B45FB444D1927D75204CBA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04C05E10272324E4992C9EFC /* Pods-MedicalConsultations.debug.xcconfig */,
+				B160D936A354A8E5FBCA37EF /* Pods-MedicalConsultations.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F418AC2B218CB1530030E18D = {
 			isa = PBXGroup;
 			children = (
 				F418AC36218CB1530030E18D /* MedicalConsultations */,
 				F418AC35218CB1530030E18D /* Products */,
+				3B45FB444D1927D75204CBA7 /* Pods */,
+				F8A9B97D05555FE69C073A33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +143,98 @@
 		F418AC36218CB1530030E18D /* MedicalConsultations */ = {
 			isa = PBXGroup;
 			children = (
+				F4CC42ED21A37C6C0047014B /* Class */,
+				F418B7572192674F00EC97B3 /* External */,
+				F418B7422192657E00EC97B3 /* Sources */,
+				F418E3E7218D02D600EA0FE8 /* Images */,
+				F418E3E2218CF11200EA0FE8 /* Extension */,
 				F418AC37218CB1530030E18D /* AppDelegate.swift */,
+				F47D956F21925E5600F53813 /* DemoMenuContentController.swift */,
 				F418AC39218CB1530030E18D /* ViewController.swift */,
 				F418AC3B218CB1530030E18D /* Main.storyboard */,
+				F4165E7F21B84B360059DACC /* GetLocationViewController.swift */,
+				F41C9BFE21B7128200ADAD7B /* OverviewProfileViewController.swift */,
+				F429666721B605F600E81C6A /* ShowAllUbicacionViewController.swift */,
+				F429666521B5FBE000E81C6A /* AllUbicacionViewController.swift */,
+				F418F80621AEEE3200D2EFBC /* UbicacionViewController.swift */,
+				F4186F2921ACD221005F503C /* ProfileViewController.swift */,
+				F41F9C2621A8AF570004F9CC /* EspecialidadesTableViewCell.swift */,
+				F418B75C219269B700EC97B3 /* EspecialidadesViewController.swift */,
+				F4186F2521ACB943005F503C /* DoctoresTableViewCell.swift */,
+				F4186F2721ACB9E8005F503C /* DoctoresViewController.swift */,
+				F418B73C2192634500EC97B3 /* MainViewController.swift */,
+				F41949A721936B030042C2B4 /* DemoController.swift */,
+				F47D95692192533600F53813 /* InicioViewController.swift */,
+				F418E3E0218CE8DD00EA0FE8 /* RegistroViewController.swift */,
 				F418AC41218CB1530030E18D /* Assets.xcassets */,
 				F418AC43218CB1530030E18D /* LaunchScreen.storyboard */,
 				F418AC46218CB1530030E18D /* Info.plist */,
 				F418AC3E218CB1530030E18D /* MedicalConsultations.xcdatamodeld */,
 			);
 			path = MedicalConsultations;
+			sourceTree = "<group>";
+		};
+		F418B7422192657E00EC97B3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F418B7432192659700EC97B3 /* CariocaGestureManager.swift */,
+				F418B7442192659700EC97B3 /* CariocaIcon.swift */,
+				F418B74C2192659800EC97B3 /* CariocaIndicatorConfiguration.swift */,
+				F418B7482192659800EC97B3 /* CariocaIndicatorView.swift */,
+				F418B7492192659800EC97B3 /* CariocaMenu.swift */,
+				F418B7472192659800EC97B3 /* CariocaMenu+Enums.swift */,
+				F418B7452192659700EC97B3 /* CariocaMenu+Protocols.swift */,
+				F418B74A2192659800EC97B3 /* CariocaMenu+Utils.swift */,
+				F418B7462192659800EC97B3 /* CariocaMenuContainerView.swift */,
+				F418B74B2192659800EC97B3 /* CariocaMenuItem.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F418B7572192674F00EC97B3 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				F418B7582192677000EC97B3 /* ASGradientView.swift */,
+				F418B7592192677000EC97B3 /* Storyboardable.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		F418E3E2218CF11200EA0FE8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F418E3E3218CF12700EA0FE8 /* Toast.swift */,
+				F418E3E5218CFB2100EA0FE8 /* Validations.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F418E3E7218D02D600EA0FE8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F418AC4E218CB7A30030E18D /* kisspng-logo-stethoscope-graphic-design-stetoskop-5ac18fb4835d75.2398837515226346765381.png */,
+				F418AC50218CBC890030E18D /* significado-del-color-blanco.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F4CC42ED21A37C6C0047014B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC42EE21A37F010047014B /* Usuario.swift */,
+				F4D6519F21A633AF00D920E7 /* Especialidad.swift */,
+				F418F80821AF2AE200D2EFBC /* Room.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F8A9B97D05555FE69C073A33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F418F80421AEEDFF00D2EFBC /* MapKit.framework */,
+				F5AD08BB6EFFC0B00E7E86DE /* Pods_MedicalConsultations.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F418AC49218CB1530030E18D /* Build configuration list for PBXNativeTarget "MedicalConsultations" */;
 			buildPhases = (
+				A5132C2A16011BD7A89CB04A /* [CP] Check Pods Manifest.lock */,
 				F418AC30218CB1530030E18D /* Sources */,
 				F418AC31218CB1530030E18D /* Frameworks */,
 				F418AC32218CB1530030E18D /* Resources */,
+				55EB154772394933F5099677 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F418AC45218CB1530030E18D /* LaunchScreen.storyboard in Resources */,
+				F418AC51218CBC890030E18D /* significado-del-color-blanco.png in Resources */,
+				F418AC4F218CB7A30030E18D /* kisspng-logo-stethoscope-graphic-design-stetoskop-5ac18fb4835d75.2398837515226346765381.png in Resources */,
 				F418AC42218CB1530030E18D /* Assets.xcassets in Resources */,
 				F418AC3D218CB1530030E18D /* Main.storyboard in Resources */,
 			);
@@ -134,13 +308,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55EB154772394933F5099677 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MedicalConsultations/Pods-MedicalConsultations-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CariocaMenu/CariocaMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/EVReflection/EVReflection.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CariocaMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVReflection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedicalConsultations/Pods-MedicalConsultations-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5132C2A16011BD7A89CB04A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedicalConsultations-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F418AC30218CB1530030E18D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4165E8021B84B360059DACC /* GetLocationViewController.swift in Sources */,
+				F429666621B5FBE000E81C6A /* AllUbicacionViewController.swift in Sources */,
+				F418B7542192659800EC97B3 /* CariocaMenu+Utils.swift in Sources */,
 				F418AC40218CB1530030E18D /* MedicalConsultations.xcdatamodeld in Sources */,
+				F418E3E6218CFB2100EA0FE8 /* Validations.swift in Sources */,
+				F418B74E2192659800EC97B3 /* CariocaIcon.swift in Sources */,
+				F418B7532192659800EC97B3 /* CariocaMenu.swift in Sources */,
+				F418B7522192659800EC97B3 /* CariocaIndicatorView.swift in Sources */,
+				F418B7562192659800EC97B3 /* CariocaIndicatorConfiguration.swift in Sources */,
+				F41F9C2721A8AF570004F9CC /* EspecialidadesTableViewCell.swift in Sources */,
+				F418F80921AF2AE200D2EFBC /* Room.swift in Sources */,
+				F418B74D2192659800EC97B3 /* CariocaGestureManager.swift in Sources */,
+				F4186F2621ACB943005F503C /* DoctoresTableViewCell.swift in Sources */,
+				F418B75A2192677000EC97B3 /* ASGradientView.swift in Sources */,
+				F41C9BFF21B7128200ADAD7B /* OverviewProfileViewController.swift in Sources */,
+				F418B7502192659800EC97B3 /* CariocaMenuContainerView.swift in Sources */,
+				F41949A821936B030042C2B4 /* DemoController.swift in Sources */,
+				F4186F2A21ACD221005F503C /* ProfileViewController.swift in Sources */,
+				F4186F2821ACB9E8005F503C /* DoctoresViewController.swift in Sources */,
+				F47D956A2192533600F53813 /* InicioViewController.swift in Sources */,
+				F429666821B605F600E81C6A /* ShowAllUbicacionViewController.swift in Sources */,
+				F418B74F2192659800EC97B3 /* CariocaMenu+Protocols.swift in Sources */,
+				F4CC42EF21A37F010047014B /* Usuario.swift in Sources */,
+				F47D957021925E5600F53813 /* DemoMenuContentController.swift in Sources */,
+				F418B7512192659800EC97B3 /* CariocaMenu+Enums.swift in Sources */,
+				F418F80721AEEE3200D2EFBC /* UbicacionViewController.swift in Sources */,
+				F418E3E1218CE8DD00EA0FE8 /* RegistroViewController.swift in Sources */,
+				F418E3E4218CF12700EA0FE8 /* Toast.swift in Sources */,
+				F418B75D219269B700EC97B3 /* EspecialidadesViewController.swift in Sources */,
+				F418B75B2192677000EC97B3 /* Storyboardable.swift in Sources */,
+				F418B73D2192634500EC97B3 /* MainViewController.swift in Sources */,
 				F418AC3A218CB1530030E18D /* ViewController.swift in Sources */,
+				F418B7552192659800EC97B3 /* CariocaMenuItem.swift in Sources */,
+				F4D651A021A633AF00D920E7 /* Especialidad.swift in Sources */,
 				F418AC38218CB1530030E18D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,10 +531,11 @@
 		};
 		F418AC4A218CB1530030E18D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04C05E10272324E4992C9EFC /* Pods-MedicalConsultations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53R887HQ9Q;
+				DEVELOPMENT_TEAM = W8AV9P8GXP;
 				INFOPLIST_FILE = MedicalConsultations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tecsup.MedicalConsultations;
@@ -291,10 +547,11 @@
 		};
 		F418AC4B218CB1530030E18D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B160D936A354A8E5FBCA37EF /* Pods-MedicalConsultations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53R887HQ9Q;
+				DEVELOPMENT_TEAM = W8AV9P8GXP;
 				INFOPLIST_FILE = MedicalConsultations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tecsup.MedicalConsultations;
