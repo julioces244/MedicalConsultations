@@ -100,7 +100,8 @@ extension MainViewController: CariocaDelegate {
             displayDemo(EspecialidadesViewController.fromStoryboard())
         case 3:
             displayDemo(AllUbicacionViewController.fromStoryboard())
-       // case 4:
+        case 4:
+            self.performSegue(withIdentifier: "returnLoginSegue", sender: self)
        //     displayDemo(DemoIdeaViewController.fromStoryboard())
         default:
             displayDemo(InicioViewController.fromStoryboard())

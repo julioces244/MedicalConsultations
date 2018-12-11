@@ -25,7 +25,7 @@ class DemoMenuContentController: UITableViewController, CariocaDataSource {
         CariocaMenuItem("Inicio", .emoji("🏠")),
         CariocaMenuItem("Perfil", .emoji("👤")),
         CariocaMenuItem("Buscar Doctor", .emoji("👨🏼‍💻")),
-        CariocaMenuItem("Travel", .emoji("✈️")),
+        CariocaMenuItem("Mapa Consultorios", .emoji("✈️")),
         CariocaMenuItem("Salir", .emoji("🚪"))
     ]
     ///This defines the height of each menu item

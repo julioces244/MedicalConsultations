@@ -11,8 +11,9 @@ import Alamofire
 import MaterialComponents.MaterialCards
 import SDWebImage
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, DemoController {
 
+    weak var menuController: CariocaController?
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var perfilImage: UIImageView!

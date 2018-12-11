@@ -15,13 +15,19 @@ class GetLocationViewController: UIViewController, UISearchBarDelegate {
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var saveLocation: UIButton!
+    let id = UserDefaults.standard.integer(forKey: "id")
     var searchBarController : UISearchController!
     let geocoder = CLGeocoder()
     var adress = ""
+    var lat = ""
+    var lon = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("NAVIDAIDIADIAIDAJKDADLWJDJLAWLJDALJKWJLDWJLDWAJLKALJWDWJLKFLJK")
+        print(id)
+        saveLocation.isEnabled = false
         mapView.showsUserLocation = true
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -31,8 +37,51 @@ class GetLocationViewController: UIViewController, UISearchBarDelegate {
         
         //let tap = UITapGestureRecognizer(target:self, action:#selector(self.action(gestureRecognizer:)))
         mapView.addGestureRecognizer(tapGesture)
+        
     }
-
+    
+    
+    @IBAction func guardarUbicacion(_ sender: Any) {
+        print(lat)
+        print(lon)
+        print(id)
+        
+        let parameters: Parameters = [
+            "latitud" : lat,
+            "longitud" : lon,
+            "doctors_users_id" : id,
+            "address" : adress,
+            "condition" : 1,
+            "state" : 1
+        ]
+        
+        Alamofire.request("https://proyectintegrador-rmiya.cs50.io/api/rooms", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                
+                if let json = response.result.value {
+                    
+                    print("JSON: \(json)") // serialized json response
+                    
+                    let alertController : UIAlertController = UIAlertController(title: "Completado!", message: "Ud. a agregado su ubicación satisfactoriamente", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                    //self.view.showToast(toastMessage: "Registro valido", duration: 1.1)
+                    //self.performSegue(withIdentifier: "toinicio", sender: sender)
+                    self.performSegue(withIdentifier: "returnOverviewProfile", sender: sender)
+                    
+                }
+                
+                
+            case .failure(let error):
+                print("TENEMOS UN GRAN ERROR", error)
+            }
+        }
+    }
+    
+    
+    
+    
     
     @IBAction func locaizame() {
         initLocation()
@@ -91,6 +140,10 @@ extension GetLocationViewController : CLLocationManagerDelegate {
         annotation.title = adress
         annotation.subtitle = "Latitud: \(latitud) Longitud: \(longitud)"
         mapView.addAnnotation(annotation)
+        
+        saveLocation.isEnabled = true
+        lat = latitud
+        lon = longitud
     }
     
     func geocoderLocation(newLocation: CLLocation) {

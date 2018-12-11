@@ -33,12 +33,68 @@ class RegistroViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    var especialidadid = 0
     
+    @IBOutlet var specialitiesButtons: [UIButton]!
     
-    
-    
-    @IBAction func registroButton(_ sender: UIButton) {
+    @IBAction func handleSelection(_ sender: UIButton) {
         
+        specialitiesButtons.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    
+    enum Citys: String {
+        
+        
+        
+        
+        case mg = "Medicina General"
+        case psi = "Psiquiatría"
+    }
+    
+    
+    @IBAction func specialityTapped(_ sender: UIButton) {
+        
+        guard let title = sender.currentTitle, let city = Citys(rawValue: title) else {
+            return
+        }
+            
+            switch city {
+            case .mg:
+                
+                especialidadid = 1
+                print("Boston")
+                specialitiesButtons.forEach { (button) in
+                    UIView.animate(withDuration: 0.3, animations: {
+                        button.isHidden = !button.isHidden
+                        self.view.layoutIfNeeded()
+                    })
+                }
+                
+            case .psi:
+                
+                especialidadid = 2
+                print("Psiquiatria")
+                specialitiesButtons.forEach { (button) in
+                    UIView.animate(withDuration: 0.3, animations: {
+                        button.isHidden = !button.isHidden
+                        self.view.layoutIfNeeded()
+                    })
+                }
+                
+                
+            default:
+                print("San fran")
+            }
+    }
+    
+    
+    @IBAction func registroButton(_ sender: Any) {
         //Nombres, Apellidos, Correo & Password
         var correo = correoTextField.text
         var password = contraseñaTextField.text
@@ -51,7 +107,7 @@ class RegistroViewController: UIViewController {
         if(apellidosTextField.text == ""){
             self.view.showToast(toastMessage: "Por favor ingrese apellidos", duration: 1.1)
         }
-       
+        
         if((correoTextField.text!).isValidEmail){
             
         }else{
@@ -76,25 +132,26 @@ class RegistroViewController: UIViewController {
         
         var valortipousuario = 0;
         if(tipousuario == "Doctor"){
-            valortipousuario = 1;
-        }else{
             valortipousuario = 2;
+        }else{
+            valortipousuario = 1;
         }
+        
         
         
         //let tipousuario =
         
         print(gender!)
         
-      /*  let alertManager=UIAlertController(title: nil, message: "Welcome!", preferredStyle: .alert)
-        
-        self.present(alertManager, animated: true, completion: nil)
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1,
-                                      execute: {
-                                        alertManager.dismiss(animated: false, completion: nil)
-                                        
-        })*/
+        /*  let alertManager=UIAlertController(title: nil, message: "Welcome!", preferredStyle: .alert)
+         
+         self.present(alertManager, animated: true, completion: nil)
+         
+         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1,
+         execute: {
+         alertManager.dismiss(animated: false, completion: nil)
+         
+         })*/
         
         let parameters: Parameters = [
             "name" : nombres,
@@ -102,7 +159,8 @@ class RegistroViewController: UIViewController {
             "email" : correo,
             "password" : password,
             "genders_id" : valorgender,
-            "perfil_id" : valortipousuario
+            "perfil_id" : valortipousuario,
+            "specialities_id" : especialidadid
         ]
         
         Alamofire.request("https://proyectintegrador-rmiya.cs50.io/api/users", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
@@ -123,12 +181,37 @@ class RegistroViewController: UIViewController {
                 }
             case .failure(let error):
                 print("TENEMOS UN GRAN ERROR", error)
+                if response.response?.statusCode == 400 {
+                    
+                    if let json = response.result.value {
+                        print("JSON: \(json)")
+                        
+                    }
+                    
+                    let alertController : UIAlertController = UIAlertController(title: "Alerta", message: "Ya existe un usuario con ese correo", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+                
+                if response.response?.statusCode == 412 {
+                    
+                    if let json = response.result.value {
+                        print("JSON: \(json)")
+                        
+                    }
+                    let alertController : UIAlertController = UIAlertController(title: "Alerta", message: "Campo invalido", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+                
+                
             }
         }
-
-        
         
     }
+    
     
    
     

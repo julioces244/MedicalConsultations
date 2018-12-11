@@ -13,9 +13,10 @@ import Alamofire
 
 
 
-class ShowAllUbicacionViewController: UIViewController {
+class ShowAllUbicacionViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapAllView: MKMapView!
+    var ubication = CLLocationManager()
     
     let token = UserDefaults.standard.string(forKey: "token")
     var rooms:[Room] = []
@@ -25,7 +26,30 @@ class ShowAllUbicacionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-
+        
+        //let locationManager = CLLocationManager()
+        ubication.delegate = self
+        ubication.desiredAccuracy = kCLLocationAccuracyBest
+        
+        // Check for Location Services
+        if (CLLocationManager.locationServicesEnabled()) {
+            ubication.requestAlwaysAuthorization()
+            ubication.requestWhenInUseAuthorization()
+        }
+        
+        //Zoom to user location
+        if let userLocation = ubication.location?.coordinate {
+            let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation, 1000, 1000)
+            mapAllView.setRegion(viewRegion, animated: true)
+            
+        }
+        
+        //self.ubication = ubication
+        
+        DispatchQueue.main.async {
+            self.ubication.startUpdatingLocation()
+            self.mapAllView.showsUserLocation = true
+        }
     }
     
     private func loadData(){
@@ -64,9 +88,13 @@ class ShowAllUbicacionViewController: UIViewController {
                             let oficinaannotation = Annotation(coordinate: oficinacoordinate, title:"Consultorio medico")
                             
                             self.mapAllView.addAnnotation(oficinaannotation)
-                            let region = MKCoordinateRegionMakeWithDistance(oficinacoordinate, 2000, 2000)
-                            self.mapAllView.setRegion(region, animated: true)
                             
+                            //self.ubication.delegate = self
+                            //self.ubication.requestWhenInUseAuthorization()
+                            //self.mapAllView.showsUserLocation = true
+                            
+                            //let region = MKCoordinateRegionMakeWithDistance(oficinacoordinate, 2000, 2000)
+                            //self.mapAllView.setRegion(region, animated: true)
                         }
                         
                         //self.rooms = rooms

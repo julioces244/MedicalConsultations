@@ -17,6 +17,7 @@ class Usuario:EVNetworkingObject {
     public var email:String?
     public var phone:String?
     public var birthdate:Date?
+    public var profile:String?
     
     
 }

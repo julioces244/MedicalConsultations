@@ -19,8 +19,9 @@ class OverviewProfileViewController: UIViewController, DemoController {
     weak var menuController: CariocaController?
     let token = UserDefaults.standard.string(forKey: "token")
     let id = UserDefaults.standard.integer(forKey: "id")
+    let perfil = UserDefaults.standard.string(forKey: "perfil_id")
     
-    
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var nombreLabel: UILabel!
     
     @IBOutlet weak var apellidoLabel: UILabel!
@@ -32,6 +33,11 @@ class OverviewProfileViewController: UIViewController, DemoController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(perfil == "Paciente"){
+            cardImage2.isHidden = true
+        }
+        
+        
         imageViewProfile.layer.cornerRadius = imageViewProfile.frame.size.width/2
         imageViewProfile.clipsToBounds = true
         imageViewProfile.layer.borderColor = UIColor.white.cgColor
@@ -39,8 +45,13 @@ class OverviewProfileViewController: UIViewController, DemoController {
         
         loadCard()
         loadData()
+        //loadData2()
         print("ENTRANDO OVERVIEW")
         print(id)
+        
+        
+        
+      
     }
     
     private func loadCard(){
@@ -88,6 +99,10 @@ class OverviewProfileViewController: UIViewController, DemoController {
                         self.telefonoLabel.text = usuario.phone
                         let pictureURL = usuario.image
                         self.imageViewProfile.sd_setImage(with: URL(string: pictureURL!), placeholderImage: UIImage(named: "ic_profile"))
+                        
+                        
+                        
+                        
                         //self.usuarioname = usuario.name
                         //print("Bienvenido \(usuario.name!)")
                         
@@ -95,6 +110,38 @@ class OverviewProfileViewController: UIViewController, DemoController {
                         //if(pictureURL != nil){
                         //  user.picture = pictureURL?.absoluteString
                         //}
+                    }
+                    
+                }
+            case .failure(let error):
+                print("TENEMOS UN GRAN ERROR", error)
+                
+            }
+            
+        }
+        
+    }
+    
+    
+    private func loadData2(){
+        
+        let headers: HTTPHeaders = [
+            "x-access-token": token!
+        ]
+        
+        Alamofire.request("https://proyectintegrador-rmiya.cs50.io/api/rooms/\(id)", headers: headers).validate().responseObject{ (response: DataResponse<Room>) in
+            switch response.result {
+            case .success:
+                
+                if let json = response.result.value {
+                    
+                    print("JSON: \(json)") // serialized json response
+                    
+                    if let room = response.result.value {
+                        // That was all... You now have a User object with data
+                        print("Consultorio: \(room)")
+                        self.locationLabel.text = room.address
+                  
                     }
                     
                 }

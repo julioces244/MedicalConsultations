@@ -14,6 +14,7 @@ class Room:EVNetworkingObject{
     public var doctors_users_id:NSNumber?
     public var latitud:String?
     public var longitud:String?
+    public var address:String?
     public var state:Bool?
     
 }

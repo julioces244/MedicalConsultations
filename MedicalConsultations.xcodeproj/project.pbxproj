@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0809DE7230D79BF9AA2F2021 /* Pods_MedicalConsultations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AD08BB6EFFC0B00E7E86DE /* Pods_MedicalConsultations.framework */; };
 		F4165E8021B84B360059DACC /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4165E7F21B84B360059DACC /* GetLocationViewController.swift */; };
+		F4181C3421C061CA009B6CCA /* videoplayback.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F4181C3321C061CA009B6CCA /* videoplayback.mp4 */; };
 		F4186F2621ACB943005F503C /* DoctoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186F2521ACB943005F503C /* DoctoresTableViewCell.swift */; };
 		F4186F2821ACB9E8005F503C /* DoctoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186F2721ACB9E8005F503C /* DoctoresViewController.swift */; };
 		F4186F2A21ACD221005F503C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186F2921ACD221005F503C /* ProfileViewController.swift */; };
@@ -55,6 +56,7 @@
 		04C05E10272324E4992C9EFC /* Pods-MedicalConsultations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalConsultations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalConsultations/Pods-MedicalConsultations.debug.xcconfig"; sourceTree = "<group>"; };
 		B160D936A354A8E5FBCA37EF /* Pods-MedicalConsultations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalConsultations.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalConsultations/Pods-MedicalConsultations.release.xcconfig"; sourceTree = "<group>"; };
 		F4165E7F21B84B360059DACC /* GetLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
+		F4181C3321C061CA009B6CCA /* videoplayback.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = videoplayback.mp4; path = ../../../Downloads/videoplayback.mp4; sourceTree = "<group>"; };
 		F4186F2521ACB943005F503C /* DoctoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctoresTableViewCell.swift; sourceTree = "<group>"; };
 		F4186F2721ACB9E8005F503C /* DoctoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctoresViewController.swift; sourceTree = "<group>"; };
 		F4186F2921ACD221005F503C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		F418AC2B218CB1530030E18D = {
 			isa = PBXGroup;
 			children = (
+				F4181C3321C061CA009B6CCA /* videoplayback.mp4 */,
 				F418AC36218CB1530030E18D /* MedicalConsultations */,
 				F418AC35218CB1530030E18D /* Products */,
 				3B45FB444D1927D75204CBA7 /* Pods */,
@@ -302,6 +305,7 @@
 				F418AC51218CBC890030E18D /* significado-del-color-blanco.png in Resources */,
 				F418AC4F218CB7A30030E18D /* kisspng-logo-stethoscope-graphic-design-stetoskop-5ac18fb4835d75.2398837515226346765381.png in Resources */,
 				F418AC42218CB1530030E18D /* Assets.xcassets in Resources */,
+				F4181C3421C061CA009B6CCA /* videoplayback.mp4 in Resources */,
 				F418AC3D218CB1530030E18D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
