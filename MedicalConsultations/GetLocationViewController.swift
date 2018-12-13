@@ -10,8 +10,9 @@ import UIKit
 import MapKit
 import Alamofire
 
-class GetLocationViewController: UIViewController, UISearchBarDelegate {
+class GetLocationViewController: UIViewController, UISearchBarDelegate, DemoController {
 
+    weak var menuController: CariocaController?
     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     
@@ -62,13 +63,15 @@ class GetLocationViewController: UIViewController, UISearchBarDelegate {
                 if let json = response.result.value {
                     
                     print("JSON: \(json)") // serialized json response
+                    self.navigationController?.dismiss(animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "returnOverviewProfile", sender: sender)
                     
                     let alertController : UIAlertController = UIAlertController(title: "Completado!", message: "Ud. a agregado su ubicación satisfactoriamente", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                     //self.view.showToast(toastMessage: "Registro valido", duration: 1.1)
                     //self.performSegue(withIdentifier: "toinicio", sender: sender)
-                    self.performSegue(withIdentifier: "returnOverviewProfile", sender: sender)
+                    
                     
                 }
                 

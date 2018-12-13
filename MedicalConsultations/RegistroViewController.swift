@@ -120,28 +120,36 @@ class RegistroViewController: UIViewController {
         let gender = segmentedControlGender.titleForSegment(at: segmentedControlGender.selectedSegmentIndex)
         
         var valorgender = 0;
-        if(gender == "Masculino"){
+        if(gender! == "Masculino"){
             valorgender = 1;
-        }else{
+        }
+        if(gender! == "Femenino"){
             valorgender = 2;
         }
         
         
         //Tipo de usuario
-        let tipousuario = segmentedControlGender.titleForSegment(at: segmentedControlGender.selectedSegmentIndex)
+        let tipousuario = segmentedControlTipoUsuario.titleForSegment(at: segmentedControlTipoUsuario.selectedSegmentIndex)
         
         var valortipousuario = 0;
-        if(tipousuario == "Doctor"){
-            valortipousuario = 2;
-        }else{
+        if(tipousuario! == "Doctor"){
             valortipousuario = 1;
         }
+        if(tipousuario! == "Paciente"){
+            valortipousuario = 2;
+        }
+        
+        
         
         
         
         //let tipousuario =
         
         print(gender!)
+        print(valorgender)
+        
+        print(tipousuario!)
+        print(valortipousuario)
         
         /*  let alertManager=UIAlertController(title: nil, message: "Welcome!", preferredStyle: .alert)
          
@@ -201,6 +209,18 @@ class RegistroViewController: UIViewController {
                         
                     }
                     let alertController : UIAlertController = UIAlertController(title: "Alerta", message: "Campo invalido", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+                
+                if response.response?.statusCode == 503 {
+                    
+                    if let json = response.result.value {
+                        print("JSON: \(json)")
+                        
+                    }
+                    let alertController : UIAlertController = UIAlertController(title: "Alerta", message: "Falla en el servidor", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
                     

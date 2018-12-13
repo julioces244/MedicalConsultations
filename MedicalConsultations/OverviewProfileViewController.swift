@@ -13,6 +13,8 @@ import SDWebImage
 
 class OverviewProfileViewController: UIViewController, DemoController {
 
+    @IBOutlet weak var btnLocation: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var imageViewProfile: UIImageView!
     @IBOutlet weak var cardImage2: MDCCard!
     @IBOutlet weak var cardImage: MDCCard!
@@ -21,7 +23,7 @@ class OverviewProfileViewController: UIViewController, DemoController {
     let id = UserDefaults.standard.integer(forKey: "id")
     let perfil = UserDefaults.standard.string(forKey: "perfil_id")
     
-    @IBOutlet weak var locationLabel: UILabel!
+    
     @IBOutlet weak var nombreLabel: UILabel!
     
     @IBOutlet weak var apellidoLabel: UILabel!
@@ -32,26 +34,44 @@ class OverviewProfileViewController: UIViewController, DemoController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnLocation.isEnabled = false
+       
         
         if(perfil == "Paciente"){
             cardImage2.isHidden = true
+            imageViewProfile.layer.cornerRadius = imageViewProfile.frame.size.width/2
+            imageViewProfile.clipsToBounds = true
+            imageViewProfile.layer.borderColor = UIColor.white.cgColor
+            imageViewProfile.layer.borderWidth = 5.0
+            
+            loadCard()
+            loadData()
+        }else{
+            imageViewProfile.layer.cornerRadius = imageViewProfile.frame.size.width/2
+            imageViewProfile.clipsToBounds = true
+            imageViewProfile.layer.borderColor = UIColor.white.cgColor
+            imageViewProfile.layer.borderWidth = 5.0
+            
+            loadCard()
+            loadData()
+            loadData2()
+            print("ENTRANDO OVERVIEW")
+            print(id)
         }
         
         
-        imageViewProfile.layer.cornerRadius = imageViewProfile.frame.size.width/2
-        imageViewProfile.clipsToBounds = true
-        imageViewProfile.layer.borderColor = UIColor.white.cgColor
-        imageViewProfile.layer.borderWidth = 5.0
         
-        loadCard()
-        loadData()
-        //loadData2()
-        print("ENTRANDO OVERVIEW")
-        print(id)
+        
         
         
         
       
+    }
+    
+    
+    @IBAction func salir(_ sender: Any) {
+        self.performSegue(withIdentifier: "returnOverviewProfile", sender: sender)
+        
     }
     
     private func loadCard(){
@@ -129,7 +149,7 @@ class OverviewProfileViewController: UIViewController, DemoController {
             "x-access-token": token!
         ]
         
-        Alamofire.request("https://proyectintegrador-rmiya.cs50.io/api/rooms/\(id)", headers: headers).validate().responseObject{ (response: DataResponse<Room>) in
+        Alamofire.request("https://proyectintegrador-rmiya.cs50.io/api/rooms1/\(id)", headers: headers).validate().responseObject{ (response: DataResponse<Room>) in
             switch response.result {
             case .success:
                 
@@ -147,6 +167,14 @@ class OverviewProfileViewController: UIViewController, DemoController {
                 }
             case .failure(let error):
                 print("TENEMOS UN GRAN ERROR", error)
+                if response.response?.statusCode == 404 {
+                    self.btnLocation.isEnabled = true
+                    
+                    let alertController : UIAlertController = UIAlertController(title: "Alerta", message: "Agregue su ubicacion", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
                 
             }
             

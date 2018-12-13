@@ -16,6 +16,7 @@ class InicioViewController: UIViewController, DemoController{
     @IBOutlet weak var cardView: MDCCard!
     
     
+    @IBOutlet weak var cardView2: MDCCard!
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -25,10 +26,14 @@ class InicioViewController: UIViewController, DemoController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.interactivePopGestureRecognizer.enabled = false
         cardView.cornerRadius = 10
         cardView.setShadowElevation(ShadowElevation(rawValue: 6), for: .selected)
         cardView.setShadowColor(UIColor.black, for: .highlighted)
+        
+        cardView2.cornerRadius = 10
+        cardView2.setShadowElevation(ShadowElevation(rawValue: 6), for: .selected)
+        cardView2.setShadowColor(UIColor.black, for: .highlighted)
         print("------------------")
         print(token)
         print("------------------")
@@ -37,7 +42,8 @@ class InicioViewController: UIViewController, DemoController{
     }
     
     @IBAction func verVideo(_ sender: Any) {
-        if let path = Bundle.main.path(forResource: "videoplayback", ofType: "mp4")
+        /*
+        if let path = Bundle.main.path(forResource: "https://www.youtube.com/watch?v=_WOwOVNEfzY", ofType: "mp4")
         {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
             let videoPlayer = AVPlayerViewController()
@@ -48,6 +54,7 @@ class InicioViewController: UIViewController, DemoController{
                     video.play()
             })
         }
+ */
         
     }
     
